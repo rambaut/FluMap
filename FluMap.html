@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flu Map</title>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 200;
+            font-size: 16px;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+
+        .virus {
+            stroke: #FFF;
+        }
+
+        .serum {
+            stroke: none;
+            fill: #BBB;
+        }
+
+        div.tooltip {
+            position: absolute;
+            text-align: left;
+            padding: 4px;
+            font-size: 12px;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 4px;
+            pointer-events: none;
+        }
+
+    </style>
+</head>
+<body>
+<script type="text/javascript" src="js/d3.min.js"></script>
+<script type="text/javascript" src="js/colorbrewer.js"></script>
+<script type="text/javascript" src="js/queue.min.js"></script>
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="FluMap.js"></script>
+<script>
+    parameters = getUrlVars();
+
+    var host = 'all';
+
+    if (parameters.host !== undefined) {
+        host = parameters.host;
+    }
+
+    var fluMap = FluMap();
+
+</script>
+</body>
+</html>
